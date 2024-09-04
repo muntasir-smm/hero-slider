@@ -2,12 +2,15 @@
 
 import React from 'react';
 import HeroSlider from '../components/HeroSlider';
+import './HomePage.css'; // Import the CSS file
 
 const HomePage: React.FC = () => {
   return (
-    <div>
-      <h1>Welcome to Hero Slider Project</h1>
-      <HeroSlider />
+    <div className="page-container">
+      <h1 className="page-heading">Welcome to Hero Slider Project</h1>
+      <div className="hero-slider">
+        <HeroSlider />
+      </div>
     </div>
   );
 };

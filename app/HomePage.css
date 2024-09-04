@@ -1,0 +1,25 @@
+/* Container styling */
+.page-container {
+    text-align: center;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    background: #f5f5f5;
+    /* Light gray background */
+    min-height: 100vh;
+    /* Full viewport height */
+}
+
+/* Heading styling */
+.page-heading {
+    font-size: 2.5rem;
+    color: #f90505;
+    /* Dark gray color */
+    margin-bottom: 20px;
+}
+
+/* Add space around the HeroSlider */
+.hero-slider {
+    margin: 0 auto;
+    max-width: 1200px;
+    /* Constrain width */
+}

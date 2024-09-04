@@ -30,7 +30,9 @@ const HeroSlider: React.FC = () => {
   };
 
   return (
+    
     <div className="slider-container">
+      
       {slides.map((slide, index) => (
         <div
           key={index}
@@ -46,6 +48,7 @@ const HeroSlider: React.FC = () => {
             <h2>Slide {index + 1} Title</h2>
             <p>Slide {index + 1} Description</p>
           </div>
+          
         </div>
       ))}
       <button className="nav-button prev" onClick={goToPreviousSlide}>
@@ -54,6 +57,7 @@ const HeroSlider: React.FC = () => {
       <button className="nav-button next" onClick={goToNextSlide}>
         &gt;
       </button>
+      
     </div>
   );
 };
