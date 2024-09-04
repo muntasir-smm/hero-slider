@@ -16,7 +16,7 @@ const HeroSlider: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
-    }, 4000); // Change slide every 4 seconds
+    }, 3000); // Change slide every 3 seconds
 
     return () => clearInterval(interval); // Cleanup interval on component unmount
   }, []);
@@ -34,8 +34,7 @@ const HeroSlider: React.FC = () => {
       {slides.map((slide, index) => (
         <div
           key={index}
-          className="slide"
-          style={{ opacity: currentSlide === index ? 1 : 0 }}
+          className={`slide ${currentSlide === index ? 'active' : ''}`}
         >
           <Image
             src={slide}

@@ -1,47 +1,66 @@
 /* ./components/HeroSlider.css */
 
+/* Container for the slider */
 .slider-container {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    overflow: hidden;
-  }
-  
-  .slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transition: opacity 1s ease-in-out;
-    opacity: 0; /* Default to hidden */
-  }
-  
-  .caption {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    color: white;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-  }
-  
-  .nav-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 10;
-  }
-  
-  .prev {
-    left: 10px;
-  }
-  
-  .next {
-    right: 10px;
-  }
-  
-  
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+/* Slide styling */
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Smooth transitions */
+  opacity: 0; /* Default to hidden */
+}
+
+/* Visible slide */
+.slide.active {
+  opacity: 1;
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Caption styling */
+.caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 5px; /* Rounded corners */
+  width: 80%;
+}
+
+/* Navigation buttons */
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%; /* Round buttons */
+  font-size: 24px; /* Larger font size */
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Add hover effect to buttons */
+.nav-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
