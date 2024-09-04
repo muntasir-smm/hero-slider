@@ -1,43 +1,42 @@
-/* ./components/HeroSlider.css */
-
-/* Container for the slider */
 .slider-container {
   position: relative;
   width: 100%;
   height: 400px;
   overflow: hidden;
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Slide styling */
 .slide {
   position: absolute;
   width: 100%;
   height: 100%;
-  transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Smooth transitions */
-  opacity: 0; /* Default to hidden */
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  opacity: 0;
+  transform: translateX(100%);
+  /* Start from right */
 }
 
-/* Visible slide */
 .slide.active {
   opacity: 1;
-  transform: scale(1.05); /* Slight zoom effect */
+  transform: translateX(0);
+  /* Slide to center */
 }
 
-/* Caption styling */
 .caption {
   position: absolute;
   bottom: 20px;
-  left: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   color: white;
   background: rgba(0, 0, 0, 0.5);
   padding: 20px;
-  border-radius: 5px; /* Rounded corners */
-  width: 80%;
+  border-radius: 5px;
+  width: 90%;
+  /* Increase caption width */
+  text-align: center;
 }
 
-/* Navigation buttons */
 .nav-button {
   position: absolute;
   top: 50%;
@@ -48,8 +47,8 @@
   padding: 10px;
   cursor: pointer;
   z-index: 10;
-  border-radius: 50%; /* Round buttons */
-  font-size: 24px; /* Larger font size */
+  border-radius: 50%;
+  font-size: 24px;
 }
 
 .prev {
@@ -60,7 +59,6 @@
   right: 10px;
 }
 
-/* Add hover effect to buttons */
 .nav-button:hover {
   background-color: rgba(0, 0, 0, 0.7);
 }
