@@ -1,21 +1,13 @@
+// ./components/HeroSlider.tsx
+
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import hero1 from '../resources/images/hero1.jpg';
-import hero2 from '../resources/images/hero2.jpg';
-import hero3 from '../resources/images/hero3.jpg';
-import hero4 from '../resources/images/hero4.jpg';
+import { slides } from './slidesData'; // Import the slide data
 import './HeroSlider.css';
 
 const HeroSlider: React.FC = () => {
-  const slides = [
-    { src: hero1, title: 'Butterfly', description: 'Butterfly on the flower' },
-    { src: hero2, title: 'Tulip', description: 'Colorful Tulip' },
-    { src: hero3, title: 'Rain', description: 'Rain drop on a leaf' },
-    { src: hero4, title: 'Sunset', description: 'Sunset and white flower' },
-  ];
-
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
