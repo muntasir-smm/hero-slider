@@ -2,5 +2,8 @@
     "files.autoSave": "afterDelay",
     "editor.fontSize": 16,
     "editor.wordWrap": "on",
-    "editor.bracketPairColorization.independentColorPoolPerBracketType": true
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "cSpell.words": [
+        "Muntasir"
+    ]
 }
